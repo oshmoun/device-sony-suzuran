@@ -14,6 +14,8 @@
 
 include device/sony/kitakami/PlatformConfig.mk
 
+TARGET_SPECIFIC_HEADER_PATH += device/sony/suzuran/include
+
 TARGET_BOOTLOADER_BOARD_NAME := E5823
 
 BOARD_KERNEL_CMDLINE += androidboot.hardware=suzuran
