@@ -15,8 +15,6 @@
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/sony/msm
 
-USE_CAMERA_STUB := true
-
 BOARD_USES_QCOM_HARDWARE := true
 SONY_BF64_KERNEL_VARIANT := true
 
@@ -32,10 +30,12 @@ $(call inherit-product, vendor/pac/config/nfc_enhanced.mk)
 # Inherit some common PAC stuff.
 $(call inherit-product, vendor/pac/config/common_full_phone.mk)
 
+# Inherit TWRP requirements
+$(call inherit-product, device/sony/suzuran/twrp.mk)
+
 # Produce info overwrite
 PRODUCT_NAME := pac_suzuran
 PRODUCT_MODEL := Xperia Z5 Compact
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := suzuran,E5823
-TW_THEME := portrait_hdpi
