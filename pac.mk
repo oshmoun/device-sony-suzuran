@@ -27,6 +27,9 @@ $(call inherit-product, vendor/pac/config/nfc_enhanced.mk)
 # Inherit some common PAC stuff.
 $(call inherit-product, vendor/pac/config/common_full_phone.mk)
 
+# Inherit TWRP requirements
+$(call inherit-product, device/sony/suzuran/twrp.mk)
+
 # Produce info overwrite
 PRODUCT_NAME := pac_suzuran
 PRODUCT_MODEL := Xperia Z5 Compact
