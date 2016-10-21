@@ -23,20 +23,20 @@
 		<resource name="tsens_tz_sensor15" type="tz">/sys/class/thermal/thermal_zone17</resource> <!-- cpu6 -->
 
 		<resource name="pm8994_tz" type="tz">/sys/class/thermal/thermal_zone18</resource>
-		<resource name="msm_therm" type="tz">/sys/class/thermal/thermal_zone19</resource>
-		<resource name="emmc_therm" type="tz">/sys/class/thermal/thermal_zone20</resource>
+		<resource name="msm_therm" type="tz" offset="2">/sys/class/thermal/thermal_zone19</resource>
+		<resource name="emmc_therm" type="tz" offset="2">/sys/class/thermal/thermal_zone20</resource>
 		<resource name="pa_therm0" type="tz">/sys/class/thermal/thermal_zone21</resource>
 		<resource name="pa_therm1" type="tz">/sys/class/thermal/thermal_zone22</resource>
-		<resource name="quiet_therm" type="tz">/sys/class/thermal/thermal_zone23</resource>
+		<resource name="quiet_therm" type="tz" offset="2">/sys/class/thermal/thermal_zone23</resource>
 		<resource name="xo_therm" type="tz">/sys/class/thermal/thermal_zone24</resource>
 		<resource name="battery" type="tz">/sys/class/thermal/thermal_zone25</resource> <!-- same values as zone0, bms -->
 
 		<resource name="temp-core" type="union">
-<!--			<resource name="msm_therm" /> -->
-<!--			<resource name="emmc_therm" /> -->
+			<resource name="msm_therm" />
+			<resource name="emmc_therm" />
 			<resource name="pa_therm0" />
 			<resource name="pa_therm1" />
-<!--			<resource name="quiet_therm" /> -->
+			<resource name="quiet_therm" />
 			<resource name="xo_therm" />
 		</resource>
 
